@@ -15,9 +15,16 @@ public class GoodsApp {
 			String name = scanner.next();
 			int price = scanner.nextInt();
 			int countStock = scanner.nextInt();
-
+			Goods temp = new Goods();
+			temp.setPrice(price);
+			temp.setStock(countStock);
+			temp.setName(name);
+			goods[i] = temp;
+			
 		}
-
+		for(int i = 0 ; i < COUNT_GOODS; ++i){
+			goods[i].show();
+		}
 		// 자원정리
 		scanner.close();
 	}
