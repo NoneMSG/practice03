@@ -1,6 +1,6 @@
 package prob06;
 
-public class Calc implements calculate{
+public abstract class Calc {
 	private int x;
 	private int y;
 	
@@ -16,8 +16,7 @@ public class Calc implements calculate{
 	public void setY(int y) {
 		this.y = y;
 	}
-	public int calculate1(){
-		return this.x +this.y;
-	}
+	abstract public int cal();
+
 }
 

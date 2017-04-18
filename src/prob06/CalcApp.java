@@ -11,42 +11,42 @@ public class CalcApp {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
+		Calc arith = null;
+		
 		while( true ) {
 			/*  코드를 완성 합니다 */
 			System.out.print("input: ");
-			String input = scanner.nextLine(); 
+			String input = scanner.nextLine();
+			
 			if("quit".equals(input)){
 				System.out.println("System Shut Down");
 				break;
 			}
 			String[] tokens = input.split(" ");
-			
+			int x = Integer.parseInt(tokens[0]);
+			int y = Integer.parseInt(tokens[2]);
 			if("+".equals(tokens[1])){
-				Add plus = new Add();
-				plus.setX(Integer.parseInt(tokens[0]));
-				plus.setY(Integer.parseInt(tokens[2]));
-				System.out.println(plus.calculate1());
+				arith=new Add();
+				arith.setX(Integer.parseInt(tokens[0]));
+				arith.setY(Integer.parseInt(tokens[2]));
+				System.out.println(arith.cal());
 			}else if("-".equals(tokens[1])){
-				Sub sub = new Sub();
-				sub.setX(Integer.parseInt(tokens[0]));
-				sub.setY(Integer.parseInt(tokens[2]));
-				System.out.println(sub.calculate1());
+				arith=new Sub();
+				arith.setX(Integer.parseInt(tokens[0]));
+				arith.setY(Integer.parseInt(tokens[2]));
+				System.out.println(arith.cal());
 			}else if("*".equals(tokens[1])){
-				Mul mul = new Mul();
-				mul.setX(Integer.parseInt(tokens[0]));
-				mul.setY(Integer.parseInt(tokens[2]));
-				System.out.println(mul.calculate1());
+				arith=new Mul();
+				arith.setX(Integer.parseInt(tokens[0]));
+				arith.setY(Integer.parseInt(tokens[2]));
+				System.out.println(arith.cal());
 			}else if("/".equals(tokens[1])){
-				Div div = new Div();
-				div.setX(Integer.parseInt(tokens[0]));
-				div.setY(Integer.parseInt(tokens[2]));
-				System.out.println(div.calculate1());
+				arith=new Div();
+				arith.setX(Integer.parseInt(tokens[0]));
+				arith.setY(Integer.parseInt(tokens[2]));
+				System.out.println(arith.cal());
 			}
-			
 		}
-		
-		//scanner.close();
-
+		scanner.close();
 	}
-
 }

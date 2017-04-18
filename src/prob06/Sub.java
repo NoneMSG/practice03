@@ -13,7 +13,7 @@ public class Sub extends Calc{
 	public void setY(int y) {
 		super.setY(y);;
 	}
-	public int calculate1(){
-		return getX() - getY(); 
+	public int cal(){
+		return super.getX() - super.getY(); 
 	}
 }
